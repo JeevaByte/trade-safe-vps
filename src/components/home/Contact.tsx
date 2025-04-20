@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
+import DataCenterMap from '../map/DataCenterMap';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -183,7 +183,10 @@ const Contact = () => {
               
               <div className="mt-8">
                 <h4 className="text-lg font-medium text-precision-dark mb-4">Data Center Locations</h4>
-                <div className="grid grid-cols-2 gap-4">
+                
+                <DataCenterMap apiKey="YOUR_MAPBOX_PUBLIC_TOKEN" />
+                
+                <div className="grid grid-cols-2 gap-4 mt-4">
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <div className="flex items-center">
                       <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
