@@ -5,6 +5,10 @@ import ContactInfo from '../contact/ContactInfo';
 import DataCenterStatus from '../contact/DataCenterStatus';
 
 const Contact = () => {
+  // Please note: You need to replace 'YOUR_MAPBOX_PUBLIC_TOKEN' with a real mapbox public token.
+  // If you have a Supabase project, consider storing this token in secrets and fetching it securely.
+  const mapboxPublicToken = 'YOUR_MAPBOX_PUBLIC_TOKEN';
+
   return (
     <section className="section bg-gray-50" id="contact">
       <div className="container mx-auto">
@@ -26,7 +30,7 @@ const Contact = () => {
             <div className="bg-white rounded-xl shadow-lg p-8 h-full">
               <h3 className="text-2xl font-semibold mb-6 text-precision-dark">Get in Touch</h3>
               <ContactInfo />
-              <DataCenterStatus apiKey="YOUR_MAPBOX_PUBLIC_TOKEN" />
+              <DataCenterStatus apiKey={mapboxPublicToken} />
             </div>
           </div>
         </div>
