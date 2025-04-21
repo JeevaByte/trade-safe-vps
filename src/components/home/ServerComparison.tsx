@@ -1,25 +1,22 @@
 
 import React from "react";
-import { ExtraBuffer, Trader, Developer, Hosting, Gamer, Database, StockTrader } from "lucide-react";
-
-// Importing only used icons from lucide-react
-import { ExtraBuffer as LucideExtraBuffer, Trader as LucideTrader, Developer as LucideDeveloper, Hosting as LucideHosting, Gamer as LucideGamer, Database as LucideDatabase, StockTrader as LucideStockTrader } from "lucide-react";
+import { Server, CheckCircle, AlertCircle, Cpu, MonitorSmartphone, Database, BarChart } from "lucide-react";
 
 const featuresLeft = [
-  { icon: <LucideExtraBuffer size={18} className="text-green-400" />, label: "Extra Buffer" },
-  { icon: <LucideTrader size={16} className="text-green-400" />, label: "Trader" },
-  { icon: <LucideTrader size={16} className="text-green-400" />, label: "Trader" },
-  { icon: <LucideTrader size={16} className="text-green-400" />, label: "Trader" },
-  { icon: <LucideTrader size={16} className="text-green-400" />, label: "Trader" },
+  { icon: <CheckCircle size={18} className="text-green-400" />, label: "Extra Buffer" },
+  { icon: <Server size={16} className="text-green-400" />, label: "Trader" },
+  { icon: <Server size={16} className="text-green-400" />, label: "Trader" },
+  { icon: <Server size={16} className="text-green-400" />, label: "Trader" },
+  { icon: <Server size={16} className="text-green-400" />, label: "Trader" },
 ];
 
 const featuresRight = [
-  { icon: <LucideDeveloper size={16} className="text-neutral-300" />, label: "Developer" },
-  { icon: <LucideHosting size={16} className="text-neutral-300" />, label: "Hosting" },
-  { icon: <LucideGamer size={16} className="text-neutral-300" />, label: "Gamer" },
-  { icon: <LucideTrader size={16} className="text-neutral-300" />, label: "Trader" },
-  { icon: <LucideDatabase size={16} className="text-neutral-300" />, label: "Database" },
-  { icon: <LucideStockTrader size={16} className="text-neutral-300" />, label: "Stock Trader" },
+  { icon: <Cpu size={16} className="text-neutral-300" />, label: "Developer" },
+  { icon: <Server size={16} className="text-neutral-300" />, label: "Hosting" },
+  { icon: <MonitorSmartphone size={16} className="text-neutral-300" />, label: "Gamer" },
+  { icon: <Server size={16} className="text-neutral-300" />, label: "Trader" },
+  { icon: <Database size={16} className="text-neutral-300" />, label: "Database" },
+  { icon: <BarChart size={16} className="text-neutral-300" />, label: "Stock Trader" },
 ];
 
 const ServerComparison = () => {
@@ -33,7 +30,7 @@ const ServerComparison = () => {
           OUR SERVERS
         </h3>
         <p className="text-base md:text-lg text-neutral-300 text-center max-w-2xl mb-12">
-          Our customers are Forex traders and our servers are balanced perfectly. Your resources are never shared, that’s guaranteed.
+          Our customers are Forex traders and our servers are balanced perfectly. Your resources are never shared, that's guaranteed.
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-10 md:gap-16">
           {/* Forex VPS side */}
