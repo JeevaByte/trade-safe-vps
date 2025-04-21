@@ -63,7 +63,9 @@ const SystemStatus = ({
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Progress value={cpuUsage} max={100} className="h-2" indicatorClassName={getProgressColor(cpuUsage, 'usage')} />
+                <div>
+                  <Progress value={cpuUsage} max={100} className={`h-2 ${getProgressColor(cpuUsage, 'usage')}`} />
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>CPU Usage: {cpuUsage}%</p>
@@ -80,7 +82,9 @@ const SystemStatus = ({
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Progress value={ramUsage} max={100} className="h-2" indicatorClassName={getProgressColor(ramUsage, 'usage')} />
+                <div>
+                  <Progress value={ramUsage} max={100} className={`h-2 ${getProgressColor(ramUsage, 'usage')}`} />
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>RAM Usage: {ramUsage}%</p>
@@ -97,7 +101,9 @@ const SystemStatus = ({
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Progress value={diskUsage} max={100} className="h-2" indicatorClassName={getProgressColor(diskUsage, 'usage')} />
+                <div>
+                  <Progress value={diskUsage} max={100} className={`h-2 ${getProgressColor(diskUsage, 'usage')}`} />
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Disk Usage: {diskUsage}%</p>
@@ -114,7 +120,9 @@ const SystemStatus = ({
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Progress value={networkLatency} max={300} className="h-2" indicatorClassName={getProgressColor(networkLatency, 'latency')} />
+                <div>
+                  <Progress value={networkLatency} max={300} className={`h-2 ${getProgressColor(networkLatency, 'latency')}`} />
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Network Latency: {networkLatency} ms</p>
@@ -131,7 +139,9 @@ const SystemStatus = ({
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Progress value={uptimePercentage} max={100} className="h-2" indicatorClassName={getProgressColor(uptimePercentage, 'uptime')} />
+                <div>
+                  <Progress value={uptimePercentage} max={100} className={`h-2 ${getProgressColor(uptimePercentage, 'uptime')}`} />
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Uptime: {uptimePercentage}%</p>

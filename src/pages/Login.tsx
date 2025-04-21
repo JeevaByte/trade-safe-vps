@@ -18,7 +18,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { toast } from "sonner";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import { AlertTriangle } from "lucide-react"; // Changed from ExclamationTriangleIcon to AlertTriangle from lucide-react
 
 const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email." }),
@@ -103,7 +103,7 @@ const Login = () => {
         <CardContent>
           {showSecurityAlert && (
             <Alert variant="destructive" className="mb-4">
-              <ExclamationTriangleIcon className="h-4 w-4" />
+              <AlertTriangle className="h-4 w-4" />
               <AlertDescription>
                 Multiple failed login attempts detected. For security reasons, please wait a moment before trying again.
               </AlertDescription>

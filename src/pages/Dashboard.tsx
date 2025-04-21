@@ -62,6 +62,66 @@ const Dashboard = () => {
     serverLocation: "New York, USA (Low Latency)"
   };
 
+  // Sample trades data
+  const tradesData = [
+    {
+      date: "2025-04-21",
+      time: "14:32:15",
+      symbol: "EURUSD",
+      type: "Buy",
+      lots: "0.10",
+      openPrice: "1.0854",
+      closePrice: "1.0872",
+      profit: "18",
+      pips: "+18.0",
+      netProfit: "+$18.00",
+      duration: "1h 23m",
+      gain: "+0.09%"
+    },
+    {
+      date: "2025-04-20",
+      time: "09:15:43",
+      symbol: "GBPUSD",
+      type: "Sell",
+      lots: "0.25",
+      openPrice: "1.2654",
+      closePrice: "1.2623",
+      profit: "31",
+      pips: "+31.0",
+      netProfit: "+$77.50",
+      duration: "4h 12m",
+      gain: "+0.38%"
+    },
+    {
+      date: "2025-04-19",
+      time: "16:48:22",
+      symbol: "USDJPY",
+      type: "Buy",
+      lots: "0.15",
+      openPrice: "142.35",
+      closePrice: "141.87",
+      profit: "-48",
+      pips: "-48.0",
+      netProfit: "-$72.00",
+      duration: "2h 25m",
+      gain: "-0.35%"
+    },
+    {
+      date: "2025-04-18",
+      time: "11:22:09",
+      symbol: "XAUUSD",
+      type: "Buy",
+      lots: "0.05",
+      openPrice: "2345.67",
+      closePrice: "2378.92",
+      profit: "33.25",
+      pips: "+3325.0",
+      netProfit: "+$166.25",
+      duration: "8h 17m",
+      gain: "+0.82%"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container py-8">
@@ -130,7 +190,7 @@ const Dashboard = () => {
         </div>
         
         <div className="mt-6">
-          <TradesTable />
+          <TradesTable trades={tradesData} />
         </div>
       </div>
     </div>
