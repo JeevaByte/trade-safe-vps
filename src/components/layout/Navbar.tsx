@@ -34,7 +34,10 @@ const Navbar = () => {
             <Link to="/contact-us" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
               Contact
             </Link>
-            <Link to="/contact-us" className="btn-primary">
+            <Link to="/login" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+              Login
+            </Link>
+            <Link to="/register" className="btn-primary">
               Get Started
             </Link>
           </div>
@@ -71,7 +74,10 @@ const Navbar = () => {
               <Link to="/contact-us" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
                 Contact
               </Link>
-              <Link to="/contact-us" className="btn-primary text-center">
+              <Link to="/login" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+                Login
+              </Link>
+              <Link to="/register" className="btn-primary text-center">
                 Get Started
               </Link>
             </div>
