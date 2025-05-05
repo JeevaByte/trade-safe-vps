@@ -43,7 +43,7 @@ const SystemStatus = ({
   };
 
   return (
-    <Card>
+    <Card className="border-precision-red-light">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-center">
           <CardTitle className="text-lg">System Status</CardTitle>

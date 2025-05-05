@@ -63,13 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Precision VPS
+				// Custom colors for Precision VPS - updated to red and white theme
 				precision: {
 					dark: '#1A1F2C',
-					purple: '#9b87f5',
-					'purple-dark': '#7E69AB',
-					'purple-light': '#E5DEFF',
-					accent: '#8B5CF6',
+					red: '#ea384c',       // primary red
+					'red-dark': '#c5293a', // darker red for hover states
+					'red-light': '#ffebee', // light red for backgrounds
+					accent: '#ea384c',      // accent is now the same red
 					gray: '#8E9196',
 				}
 			},
@@ -125,7 +125,7 @@ export default {
 				heading: ['Montserrat', 'sans-serif'],
 			},
 			backgroundImage: {
-				'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z\" fill=\"rgba(155,135,245,0.07)\"%3E%3C/path%3E%3C/svg%3E')",
+				'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z\" fill=\"rgba(234,56,76,0.07)\"%3E%3C/path%3E%3C/svg%3E')",
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
