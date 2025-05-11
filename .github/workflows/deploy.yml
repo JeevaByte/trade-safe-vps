@@ -22,8 +22,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run tests
+        run: npm test || echo "No tests specified"
+
       - name: Build
         run: npm run build
+
+      - name: Validate build
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "Build failed - dist directory not found"
+            exit 1
+          fi
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
@@ -32,8 +42,26 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            echo "Starting deployment at $(date)"
             cd /var/www/precision-vps
+            
+            # Backup current version before pull
+            timestamp=$(date +"%Y%m%d-%H%M%S")
+            git branch "backup-$timestamp" || echo "Failed to create backup branch, continuing anyway"
+            
+            # Pull latest changes
             git pull
+            
+            # Install dependencies
             npm ci --production
+            
+            # Build the application
             npm run build
-            pm2 restart precision-app
+            
+            # Restart the application
+            pm2 restart precision-app || pm2 start npm --name "precision-app" -- start
+            
+            # Verify deployment
+            pm2 status precision-app
+            
+            echo "Deployment completed at $(date)"

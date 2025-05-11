@@ -40,6 +40,11 @@ export const processZohoWebhookEvent = async (event: ZohoWebhookEvent): Promise<
   try {
     console.log("Processing Zoho webhook event:", event.eventType);
     
+    // Validate event data
+    if (!event.data) {
+      throw new Error("Missing event data");
+    }
+    
     switch (event.eventType) {
       case "subscription_created":
       case "subscription_updated":
@@ -56,10 +61,17 @@ export const processZohoWebhookEvent = async (event: ZohoWebhookEvent): Promise<
         
       default:
         console.warn("Unknown event type:", event.eventType);
+        throw new Error(`Unsupported event type: ${event.eventType}`);
     }
+    
+    // Log successful processing
+    console.log(`Successfully processed ${event.eventType} event`);
   } catch (error) {
     console.error("Error processing Zoho webhook:", error);
     toast.error("Failed to process billing update");
+    
+    // Re-throw the error for upstream handling
+    throw error;
   }
 };
 
@@ -67,47 +79,103 @@ export const processZohoWebhookEvent = async (event: ZohoWebhookEvent): Promise<
  * Handle subscription events
  */
 const handleSubscriptionEvent = async (subscription: ZohoSubscription): Promise<void> => {
-  // Here you would typically update your database with the subscription data
+  // Validate subscription data
+  if (!subscription.subscription_id || !subscription.customer_id) {
+    throw new Error("Invalid subscription data");
+  }
+  
   console.log("Handling subscription event:", subscription);
   
-  // Example implementation:
-  // await fetch('/api/subscriptions/update', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(subscription),
-  // });
-  
-  toast.success(`Subscription ${subscription.status}: ${subscription.plan_name}`);
+  // Now implementing actual API call instead of the placeholder
+  try {
+    const response = await fetch('/api/subscriptions/update', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.ZOHO_API_KEY || ''}` 
+      },
+      body: JSON.stringify(subscription),
+    });
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => null);
+      throw new Error(`Failed to update subscription: ${response.status} ${errorData ? JSON.stringify(errorData) : ''}`);
+    }
+    
+    toast.success(`Subscription ${subscription.status}: ${subscription.plan_name}`);
+  } catch (error) {
+    console.error("Subscription update error:", error);
+    toast.error(`Failed to update subscription: ${subscription.plan_name}`);
+    throw error;
+  }
 };
 
 /**
  * Handle invoice created event
  */
 const handleInvoiceCreated = async (invoice: ZohoInvoice): Promise<void> => {
+  // Validate invoice data
+  if (!invoice.invoice_id || !invoice.customer_id) {
+    throw new Error("Invalid invoice data");
+  }
+  
   console.log("New invoice created:", invoice);
   
-  // Example implementation:
-  // await fetch('/api/invoices/create', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(invoice),
-  // });
-  
-  toast.info(`New invoice created: ${invoice.invoice_number}`);
+  // Now implementing actual API call instead of the placeholder
+  try {
+    const response = await fetch('/api/invoices/create', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.ZOHO_API_KEY || ''}` 
+      },
+      body: JSON.stringify(invoice),
+    });
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => null);
+      throw new Error(`Failed to create invoice: ${response.status} ${errorData ? JSON.stringify(errorData) : ''}`);
+    }
+    
+    toast.info(`New invoice created: ${invoice.invoice_number}`);
+  } catch (error) {
+    console.error("Invoice creation error:", error);
+    toast.error(`Failed to create invoice: ${invoice.invoice_number}`);
+    throw error;
+  }
 };
 
 /**
  * Handle payment received event
  */
 const handlePaymentReceived = async (invoice: ZohoInvoice): Promise<void> => {
+  // Validate invoice data
+  if (!invoice.invoice_id || !invoice.customer_id) {
+    throw new Error("Invalid invoice data");
+  }
+  
   console.log("Payment received for invoice:", invoice);
   
-  // Example implementation:
-  // await fetch('/api/payments/record', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(invoice),
-  // });
-  
-  toast.success(`Payment received for invoice: ${invoice.invoice_number}`);
+  // Now implementing actual API call instead of the placeholder
+  try {
+    const response = await fetch('/api/payments/record', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.ZOHO_API_KEY || ''}` 
+      },
+      body: JSON.stringify(invoice),
+    });
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => null);
+      throw new Error(`Failed to record payment: ${response.status} ${errorData ? JSON.stringify(errorData) : ''}`);
+    }
+    
+    toast.success(`Payment received for invoice: ${invoice.invoice_number}`);
+  } catch (error) {
+    console.error("Payment recording error:", error);
+    toast.error(`Failed to record payment: ${invoice.invoice_number}`);
+    throw error;
+  }
 };
