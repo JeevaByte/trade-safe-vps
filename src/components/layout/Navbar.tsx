@@ -16,28 +16,28 @@ const Navbar = () => {
       <div className="container mx-auto py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-precision-gold to-precision-accent"></div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-precision-gold to-ocean-500"></div>
             <span className="text-xl font-bold font-heading text-precision-dark">PrecisionVPS</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+            <Link to="/" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
               Home
             </Link>
-            <Link to="/about-us" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+            <Link to="/about-us" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
               About Us
             </Link>
-            <Link to="/vps-hosting" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+            <Link to="/vps-hosting" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
               Services
             </Link>
-            <Link to="/contact-us" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+            <Link to="/contact-us" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
               Contact
             </Link>
-            <Link to="/login" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+            <Link to="/login" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
               Login
             </Link>
-            <Link to="/register" className="btn-primary">
+            <Link to="/register" className="btn-hybrid">
               Get Started
             </Link>
           </div>
@@ -62,22 +62,22 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="mt-4 md:hidden">
             <div className="flex flex-col space-y-4 pb-4">
-              <Link to="/" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+              <Link to="/" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
                 Home
               </Link>
-              <Link to="/about-us" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+              <Link to="/about-us" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
                 About Us
               </Link>
-              <Link to="/vps-hosting" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+              <Link to="/vps-hosting" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
                 Services
               </Link>
-              <Link to="/contact-us" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+              <Link to="/contact-us" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
                 Contact
               </Link>
-              <Link to="/login" className="font-medium text-precision-dark hover:text-precision-accent transition-colors">
+              <Link to="/login" className="font-medium text-precision-dark hover:text-ocean-600 transition-colors">
                 Login
               </Link>
-              <Link to="/register" className="btn-primary text-center">
+              <Link to="/register" className="btn-hybrid text-center">
                 Get Started
               </Link>
             </div>
