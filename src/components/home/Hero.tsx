@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-hero-pattern opacity-10"></div>
       
       {/* Gradient blob */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-precision-purple opacity-20 rounded-full filter blur-3xl animate-pulse-glow"></div>
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-precision-green-700 opacity-20 rounded-full filter blur-3xl animate-pulse-glow"></div>
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-precision-accent opacity-20 rounded-full filter blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
       
       <div className="container mx-auto relative z-10">
@@ -41,7 +41,7 @@ const Hero = () => {
                 <span className="text-white text-sm">Ultra-Low Latency</span>
               </div>
               <div className="flex items-center bg-white bg-opacity-10 px-4 py-2 rounded-lg">
-                <div className="w-3 h-3 bg-yellow-400 rounded-full mr-2"></div>
+                <div className="w-3 h-3 bg-precision-gold rounded-full mr-2"></div>
                 <span className="text-white text-sm">24/7 Support</span>
               </div>
             </div>
@@ -56,7 +56,7 @@ const Hero = () => {
                     <div className="flex space-x-2">
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-precision-gold rounded-full"></div>
                     </div>
                     <div className="ml-4 text-gray-400 text-xs">Trading Terminal</div>
                   </div>
@@ -97,7 +97,7 @@ const Hero = () => {
                       <div className="flex justify-between items-center text-xs text-gray-400">
                         <span>Connection: Stable</span>
                         <span className="flex items-center">
-                          <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-1"></span>
+                          <span className="inline-block w-2 h-2 bg-precision-gold rounded-full mr-1"></span>
                           Latency: 5ms
                         </span>
                       </div>

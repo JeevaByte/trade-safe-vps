@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 47 100% 47%;
+    --primary: 122 39% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 47 100% 92%;
-    --secondary-foreground: 47 100% 30%;
+    --secondary: 122 39% 94%;
+    --secondary-foreground: 122 39% 30%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 47 100% 47%;
+    --accent: 122 39% 49%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,18 +33,18 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 47 100% 47%;
+    --ring: 122 39% 49%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 47 100% 47%;
+    --sidebar-primary: 122 39% 49%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 47 100% 92%;
-    --sidebar-accent-foreground: 47 100% 30%;
+    --sidebar-accent: 122 39% 94%;
+    --sidebar-accent-foreground: 122 39% 30%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 47 100% 47%;
+    --sidebar-ring: 122 39% 49%;
   }
 
   .dark {
@@ -57,16 +57,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 47 100% 47%;
+    --primary: 122 39% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 47 100% 30%;
+    --secondary: 122 39% 30%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 47 100% 47%;
+    --accent: 122 39% 49%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -74,16 +74,16 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 47 100% 47%;
+    --ring: 122 39% 49%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 47 100% 47%;
+    --sidebar-primary: 122 39% 49%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 47 100% 30%;
+    --sidebar-accent: 122 39% 30%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 47 100% 47%;
+    --sidebar-ring: 122 39% 49%;
   }
 }
 
@@ -101,7 +101,7 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-precision-gold to-precision-accent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-precision-green-600 to-precision-accent;
   }
   
   .container {

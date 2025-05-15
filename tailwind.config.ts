@@ -66,11 +66,23 @@ export default {
 				// Custom colors for Precision VPS
 				precision: {
 					dark: '#1A1F2C',
-					gold: '#edc001',      // primary gold
-					'gold-dark': '#c09c00', // darker gold for hover states
-					'gold-light': '#fff5cc', // light gold for backgrounds
-					accent: '#edc001',      // accent is now gold
+					gold: '#4CAF50',      // primary green
+					'gold-dark': '#388E3C', // darker green for hover states
+					'gold-light': '#E8F5E9', // light green for backgrounds
+					accent: '#4CAF50',      // accent is now green
 					gray: '#8E9196',
+					green: {
+						50: '#F1F8E9',
+						100: '#DCEDC8',
+						200: '#C5E1A5',
+						300: '#AED581',
+						400: '#9CCC65',
+						500: '#8BC34A',
+						600: '#7CB342',
+						700: '#689F38',
+						800: '#558B2F',
+						900: '#33691E',
+					}
 				}
 			},
 			borderRadius: {
@@ -125,10 +137,11 @@ export default {
 				heading: ['Montserrat', 'sans-serif'],
 			},
 			backgroundImage: {
-				'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z\" fill=\"rgba(234,56,76,0.07)\"%3E%3C/path%3E%3C/svg%3E')",
+				'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z\" fill=\"rgba(76,175,80,0.07)\"%3E%3C/path%3E%3C/svg%3E')",
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
