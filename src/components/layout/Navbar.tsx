@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="container mx-auto py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-precision-purple to-precision-accent"></div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-precision-gold to-precision-accent"></div>
             <span className="text-xl font-bold font-heading text-precision-dark">PrecisionVPS</span>
           </Link>
 

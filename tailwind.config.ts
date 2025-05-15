@@ -63,13 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Precision VPS - updated to red and white theme
+				// Custom colors for Precision VPS - updated to gold theme
 				precision: {
 					dark: '#1A1F2C',
-					red: '#ea384c',       // primary red
-					'red-dark': '#c5293a', // darker red for hover states
-					'red-light': '#ffebee', // light red for backgrounds
-					accent: '#ea384c',      // accent is now the same red
+					gold: '#edc001',      // primary gold
+					'gold-dark': '#c09c00', // darker gold for hover states
+					'gold-light': '#fff5cc', // light gold for backgrounds
+					accent: '#edc001',      // accent is now gold
 					gray: '#8E9196',
 				}
 			},
