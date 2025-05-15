@@ -46,7 +46,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 47 100% 47%;
     
-    /* New Ocean Blue Palette */
+    /* Ocean Blue Palette */
     --ocean-blue-900: 240 100% 10%;
     --ocean-blue-800: 216 85% 12%;
     --ocean-blue-700: 200 98% 24%;
@@ -112,7 +112,7 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-precision-gold to-precision-accent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-precision-gold to-ocean-500;
   }
   
   .container {
@@ -147,25 +147,24 @@
     @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-all border border-gray-100;
   }
   
-  /* New hybrid classes */
+  /* Hybrid classes */
   .ocean-gradient {
-    @apply bg-gradient-to-b from-ocean-blue-900 via-ocean-blue-600 to-ocean-blue-200;
+    @apply bg-gradient-to-b from-ocean-900 via-ocean-600 to-ocean-200;
   }
   
   .gold-ocean-gradient {
-    @apply bg-gradient-to-r from-precision-gold to-ocean-blue-500;
+    @apply bg-gradient-to-r from-precision-gold to-ocean-500;
   }
   
   .btn-ocean {
-    @apply bg-ocean-blue-600 hover:bg-ocean-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all;
+    @apply bg-ocean-600 hover:bg-ocean-700 text-white font-medium py-2 px-6 rounded-lg transition-all;
   }
   
   .btn-hybrid {
-    @apply bg-gradient-to-r from-precision-gold to-ocean-blue-600 hover:from-precision-gold-dark hover:to-ocean-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all;
+    @apply bg-gradient-to-r from-precision-gold to-ocean-600 hover:from-precision-gold-dark hover:to-ocean-700 text-white font-medium py-2 px-6 rounded-lg transition-all;
   }
   
   .card-ocean {
-    @apply bg-gradient-to-br from-ocean-blue-100 to-white rounded-xl shadow-lg p-6;
+    @apply bg-gradient-to-br from-ocean-100 to-white rounded-xl shadow-lg p-6;
   }
 }
-

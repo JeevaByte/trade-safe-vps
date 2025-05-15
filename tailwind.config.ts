@@ -72,17 +72,17 @@ export default {
 					accent: '#edc001',      // accent is now gold
 					gray: '#8E9196',
 				},
-				// New ocean blue palette
+				// Ocean blue palette
 				ocean: {
-					900: 'hsl(var(--ocean-blue-900))', // #03045E
-					800: 'hsl(var(--ocean-blue-800))', // #023E8A
-					700: 'hsl(var(--ocean-blue-700))', // #0077B6
-					600: 'hsl(var(--ocean-blue-600))', // #0096C7
-					500: 'hsl(var(--ocean-blue-500))', // #00B4D8
-					400: 'hsl(var(--ocean-blue-400))', // #48CAE4
-					300: 'hsl(var(--ocean-blue-300))', // #90E0EF
-					200: 'hsl(var(--ocean-blue-200))', // #ADE8F4
-					100: 'hsl(var(--ocean-blue-100))', // #CAF0F8
+					900: 'hsl(var(--ocean-blue-900))',
+					800: 'hsl(var(--ocean-blue-800))',
+					700: 'hsl(var(--ocean-blue-700))',
+					600: 'hsl(var(--ocean-blue-600))',
+					500: 'hsl(var(--ocean-blue-500))',
+					400: 'hsl(var(--ocean-blue-400))',
+					300: 'hsl(var(--ocean-blue-300))',
+					200: 'hsl(var(--ocean-blue-200))',
+					100: 'hsl(var(--ocean-blue-100))',
 				}
 			},
 			borderRadius: {
