@@ -45,17 +45,6 @@
     --sidebar-accent-foreground: 47 100% 30%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 47 100% 47%;
-    
-    /* New Ocean Blue Palette */
-    --ocean-blue-900: 240 100% 10%;
-    --ocean-blue-800: 216 85% 12%;
-    --ocean-blue-700: 200 98% 24%;
-    --ocean-blue-600: 194 96% 36%;
-    --ocean-blue-500: 190 96% 46%;
-    --ocean-blue-400: 186 97% 58%;
-    --ocean-blue-300: 187 97% 70%;
-    --ocean-blue-200: 187 92% 84%;
-    --ocean-blue-100: 186 82% 94%;
   }
 
   .dark {
@@ -112,7 +101,7 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-precision-gold to-ocean-blue-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-precision-gold to-precision-accent;
   }
   
   .container {
@@ -130,21 +119,9 @@
   .btn-secondary {
     @apply bg-white text-precision-dark border border-precision-gold hover:bg-precision-gold-light font-medium py-2 px-6 rounded-lg transition-all;
   }
-  
-  .btn-ocean {
-    @apply bg-ocean-600 hover:bg-ocean-700 text-white font-medium py-2 px-6 rounded-lg transition-all;
-  }
-  
-  .btn-hybrid {
-    @apply bg-gradient-to-r from-precision-gold to-ocean-500 hover:from-precision-gold-dark hover:to-ocean-600 text-white font-medium py-2 px-6 rounded-lg transition-all;
-  }
 
   .card {
     @apply bg-white rounded-xl shadow-lg p-6;
-  }
-  
-  .card-ocean {
-    @apply bg-gradient-to-br from-ocean-100 to-white rounded-xl shadow-lg p-6;
   }
 
   .feature-card {
@@ -157,14 +134,5 @@
 
   .testimonial-card {
     @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-all border border-gray-100;
-  }
-  
-  /* New hybrid classes */
-  .ocean-gradient {
-    @apply bg-gradient-to-b from-ocean-900 via-ocean-600 to-ocean-200;
-  }
-  
-  .gold-ocean-gradient {
-    @apply bg-gradient-to-r from-precision-gold to-ocean-500;
   }
 }

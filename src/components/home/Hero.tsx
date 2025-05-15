@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center py-16 md:py-24 lg:py-32">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Experience <span className="gradient-text">Uninterrupted</span> Trading with Precision VPS
+              Experience <span className="text-precision-gold">Uninterrupted</span> Trading with Precision VPS
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
               Lightning-fast servers with ultra-low latency, 99.99% uptime guarantee, and enterprise-grade security for professional Forex traders.
@@ -107,7 +107,7 @@ const Hero = () => {
               </div>
               
               {/* Speed indicator */}
-              <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-precision-purple text-white py-2 px-4 rounded-lg shadow-lg">
+              <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-precision-gold text-white py-2 px-4 rounded-lg shadow-lg">
                 <div className="text-sm font-semibold">Ultra-Fast</div>
                 <div className="text-xs">
                   <span className="font-mono">5ms</span> Latency
